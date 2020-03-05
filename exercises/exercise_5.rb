@@ -8,3 +8,12 @@ puts "Exercise 5"
 puts "----------"
 
 # Your code goes here ...
+puts "Total Revenue for all stores is $#{Store.sum("annual_revenue")}"
+
+puts "--------------------------------------------------------------------"
+
+puts "Average revenue for all stores $#{Store.average("annual_revenue")}"
+
+puts "--------------------------------------------------------------------"
+
+puts "Number of stores that are generating $1M or more in annual sales #{Store.where("annual_revenue >= 1000000").count}"
